@@ -1,0 +1,8 @@
+{
+  "name": "MFS Facilities Management",
+  "description": "Professional security and facilities management services website.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
