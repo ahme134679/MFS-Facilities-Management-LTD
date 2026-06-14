@@ -31,7 +31,7 @@ export default function Hero() {
               Professional <span className="text-mfs-gold">Security</span> & Facilities Management
             </h1>
             <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-xl leading-relaxed">
-              Tailored security solutions safeguarding your business, assets, and people across the UK. Excellence and vigilance you can rely on.
+              Tailored security solutions safeguarding your business, assets, and people across the UK, specializing in Cardiff, Newport, South Wales, and Bristol. Excellence and vigilance you can rely on.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">

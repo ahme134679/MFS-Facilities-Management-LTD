@@ -1,7 +1,13 @@
 import { Shield, Users, Clock, Building2, MapPin, Beer } from 'lucide-react';
 import { motion } from 'motion/react';
 
-export default function Services() {
+export default function Services({ 
+  setCurrentPage, 
+  setSelectedService 
+}: { 
+  setCurrentPage?: (page: string) => void;
+  setSelectedService?: (service: string) => void;
+}) {
   const services = [
     {
       title: "Manned Guarding",
@@ -59,7 +65,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-gray-50 border border-gray-100 rounded-lg p-8 hover:shadow-xl hover:border-gray-200 transition-all group"
+              className="bg-gray-50 border border-gray-100 rounded-lg p-8 hover:shadow-xl hover:border-gray-200 transition-all group shrink-0 flex flex-col"
             >
               <div className="bg-white w-16 h-16 rounded-lg shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 {service.icon}
@@ -68,9 +74,19 @@ export default function Services() {
               <p className="text-gray-600 leading-relaxed mb-4">
                 {service.description}
               </p>
-              <a href="#contact" className="text-mfs-blue font-semibold text-sm flex items-center gap-1 hover:text-mfs-gold transition-colors">
+              <button 
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (setCurrentPage && setSelectedService) {
+                    setSelectedService(service.title);
+                    setCurrentPage('service-details');
+                    window.scrollTo(0, 0);
+                  }
+                }}
+                className="text-mfs-blue font-semibold text-sm flex items-center gap-1 hover:text-mfs-gold transition-colors mt-auto"
+              >
                 Learn more &rarr;
-              </a>
+              </button>
             </motion.div>
           ))}
         </div>

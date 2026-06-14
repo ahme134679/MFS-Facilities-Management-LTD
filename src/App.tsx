@@ -8,9 +8,11 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import AboutPage from './components/AboutPage';
 import ContactPage from './components/ContactPage';
+import ServiceDetailsPage from './components/ServiceDetailsPage';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
+  const [selectedService, setSelectedService] = useState('Manned Guarding');
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col font-sans">
@@ -20,7 +22,7 @@ export default function App() {
         {currentPage === 'home' ? (
           <>
             <Hero />
-            <Services />
+            <Services setCurrentPage={setCurrentPage} setSelectedService={setSelectedService} />
             <About />
             <Sectors />
           </>
@@ -28,6 +30,8 @@ export default function App() {
           <AboutPage />
         ) : currentPage === 'contact' ? (
           <ContactPage />
+        ) : currentPage === 'service-details' ? (
+          <ServiceDetailsPage serviceTitle={selectedService} setCurrentPage={setCurrentPage} />
         ) : null}
       </main>
 

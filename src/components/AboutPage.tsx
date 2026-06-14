@@ -12,7 +12,7 @@ export default function AboutPage() {
   const milestones = [
     "SIA Approved Contractor Scheme (ACS) Status Achieved",
     "ISO 9001 Quality Management Certified",
-    "Expansion across all major UK cities",
+    "Expansion across all major UK cities, including Cardiff, Newport, South Wales, and Bristol",
     "Implementation of state-of-the-art 24/7 Control Room",
     "Dedicated bespoke training academy for all operatives"
   ];
@@ -31,7 +31,7 @@ export default function AboutPage() {
             <h1 className="text-mfs-gold font-bold tracking-wider uppercase text-sm mb-2">Our Story</h1>
             <h2 className="text-4xl md:text-5xl font-bold text-mfs-navy mb-6">About MFS Facilities</h2>
             <p className="text-lg text-gray-600 leading-relaxed font-medium">
-              We are a premier provider of highly trained, reliable, and professional security personnel and comprehensive facilities management services across the United Kingdom.
+              We are a premier provider of highly trained, reliable, and professional security personnel and comprehensive facilities management services across the United Kingdom, especially in Cardiff, Newport, South Wales, and Bristol.
             </p>
           </motion.div>
         </div>
@@ -89,7 +89,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-mfs-navy mb-6">Our Commitment to Excellence</h2>
             <div className="text-gray-600 space-y-4 mb-8 text-lg">
               <p>
-                Founded on the principles of reliability and professionalism, MFS Facilities Management has grown into a leading force in the UK security industry. We understand that security is more than just a physical presence; it is about proactive risk management, advanced technology integration, and impeccable customer service.
+                Founded on the principles of reliability and professionalism, MFS Facilities Management has grown into a leading force in the UK security industry, specifically serving Cardiff, Newport, South Wales, and Bristol. We understand that security is more than just a physical presence; it is about proactive risk management, advanced technology integration, and impeccable customer service.
               </p>
               <p>
                 Our rigorous recruitment process ensures we only deploy SIA-licensed professionals who undergo continuous training in conflict management, customer care, and emergency response.

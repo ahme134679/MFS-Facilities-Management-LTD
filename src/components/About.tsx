@@ -50,7 +50,7 @@ export default function About() {
             
             <div className="text-gray-600 space-y-4 mb-8 text-lg">
               <p>
-                At MFS Facilities Management LTD, we understand that security is not a one-size-fits-all commodity. We are a trusted provider of bespoke security guarding and facilities management across the UK.
+                At MFS Facilities Management LTD, we understand that security is not a one-size-fits-all commodity. We are a trusted provider of bespoke security guarding and facilities management across the UK, with a strong focus on Cardiff, Newport, South Wales, and Bristol.
               </p>
               <p>
                 Our philosophy is built on three core pillars: proactive risk management, highly-trained personnel, and unwavering reliability. Whether you require premium corporate concierge, robust construction site security, or rapid alarm response, we partner with you to safeguard your operations.

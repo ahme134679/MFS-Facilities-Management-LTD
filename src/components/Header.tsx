@@ -52,13 +52,17 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div 
-            className="flex items-center gap-2 cursor-pointer"
+            className="flex items-center gap-3 cursor-pointer shrink-0"
             onClick={(e) => handleNavClick(e as any, navLinks[0])}
           >
-            <ShieldCheck className="h-8 w-8 text-mfs-gold" />
-            <div className="flex flex-col">
-              <span className="text-white font-bold text-xl leading-tight">MFS</span>
-              <span className="text-gray-300 text-xs tracking-wider">FACILITIES MANAGEMENT</span>
+            <img 
+              src="https://lh3.googleusercontent.com/pw/AP1GczP1mvUhzCeI25Ip1kdtgh6JMVWOZ80i6XnlZENYJI8GmjYWRkeKXVp5xqiCDGMCzIJsWsNeG0rpNxfDV8MSazgBZALDRenRhtptDPhZvHeC-bnVddfj=s800" 
+              alt="MFS Facilities Management" 
+              className="h-14 md:h-16 w-auto object-contain"
+              referrerPolicy="no-referrer"
+            />
+            <div className="hidden sm:flex flex-col">
+              <span className="text-white font-bold text-base md:text-lg leading-tight uppercase tracking-wide">MFS Facilities Management LTD</span>
             </div>
           </div>
 

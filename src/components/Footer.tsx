@@ -37,7 +37,7 @@ export default function Footer({ setCurrentPage }: FooterProps) {
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              A premier security provider offering industry-leading manned guarding, mobile patrols, and risk management solutions across the UK. 
+              A premier security provider offering industry-leading manned guarding, mobile patrols, and risk management solutions across the UK, specializing in Cardiff, Newport, South Wales, and Bristol.
             </p>
             <div className="flex items-center gap-4">
               <a href="https://www.facebook.com/profile.php?id=61590675005764" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-gray-300 hover:bg-mfs-gold hover:text-white transition-all"><Facebook className="h-4 w-4" /></a>
