@@ -25,7 +25,7 @@ export default function App() {
           <>
             <Hero />
             <Services setCurrentPage={setCurrentPage} setSelectedService={setSelectedService} />
-            <About />
+            <About setCurrentPage={setCurrentPage} />
             <Sectors setCurrentPage={setCurrentPage} setSelectedSector={setSelectedSector} />
           </>
         ) : currentPage === 'about' ? (

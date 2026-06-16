@@ -1,7 +1,7 @@
 import { CheckCircle2 } from 'lucide-react';
 import { motion } from 'motion/react';
 
-export default function About() {
+export default function About({ setCurrentPage }: { setCurrentPage?: (page: string) => void }) {
   const points = [
     "SIA Approved Contractor Scheme (ACS) Status",
     "ISO 9001 Quality Management Certified",
@@ -66,9 +66,19 @@ export default function About() {
               ))}
             </div>
 
-            <a href="#contact" className="inline-block bg-mfs-navy hover:bg-mfs-blue text-white font-bold px-8 py-4 rounded-md transition-colors">
+            <button 
+              onClick={(e) => {
+                e.preventDefault();
+                if (setCurrentPage) setCurrentPage('home');
+                setTimeout(() => {
+                  const el = document.getElementById('services');
+                  if(el) el.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+              }}
+              className="inline-block bg-mfs-navy hover:bg-mfs-blue text-white font-bold px-8 py-4 rounded-md transition-colors"
+            >
               Discuss Your Security Needs
-            </a>
+            </button>
           </motion.div>
 
         </div>
