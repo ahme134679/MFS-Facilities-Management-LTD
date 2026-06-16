@@ -102,9 +102,9 @@ export default function Footer({ setCurrentPage }: FooterProps) {
             &copy; {new Date().getFullYear()} MFS Facilities Management LTD. All rights reserved. Registered in 2025. Company Reg: 16304479.
           </p>
           <div className="flex gap-4">
-            <a href="#" className="text-gray-500 hover:text-white text-xs transition-colors">Privacy Policy</a>
-            <a href="#" className="text-gray-500 hover:text-white text-xs transition-colors">Terms of Service</a>
-            <a href="#" className="text-gray-500 hover:text-white text-xs transition-colors">Modern Slavery Statement</a>
+            <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('privacy'); window.scrollTo(0,0); }} className="text-gray-500 hover:text-white text-xs transition-colors">Privacy Policy</a>
+            <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('terms'); window.scrollTo(0,0); }} className="text-gray-500 hover:text-white text-xs transition-colors">Terms of Service</a>
+            <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('slavery'); window.scrollTo(0,0); }} className="text-gray-500 hover:text-white text-xs transition-colors">Modern Slavery Statement</a>
           </div>
         </div>
       </div>
