@@ -56,9 +56,9 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
             onClick={(e) => handleNavClick(e as any, navLinks[0])}
           >
             <img 
-              src="https://lh3.googleusercontent.com/pw/AP1GczPN0DCKkUzABeAAdWVrNYWKIH9kaEzrsRE1TTNzRp7Lu7Y3z1c_CH8nhxhEENte9lTMhBnhR5yanNq-e9OlqDsoRoFwvNppIkueVjcLPBcBLLCcQX1R=s800" 
+              src="https://lh3.googleusercontent.com/pw/AP1GczN01Rcctmpprxt_Ds89IeEGe3NfjShrCuNMU2rXPRnldpynbuV9TF5KK58p1Bm3f1h3xgjyMeJyyGzC0VuGMrrwtvkDLUnjmr16Sqe12b6S-SHzb0Yt=s800" 
               alt="MFS Facilities Management" 
-              className="h-14 md:h-16 w-auto object-contain"
+              className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain"
               referrerPolicy="no-referrer"
             />
             <div className="hidden sm:flex flex-col">
