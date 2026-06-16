@@ -109,6 +109,7 @@ const sectorsData = [
 
 export default function SectorsPage({ initialSector, setCurrentPage }: SectorPageProps) {
   const [selectedSector, setSelectedSector] = useState(sectorsData[0]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (initialSector) {
@@ -122,6 +123,12 @@ export default function SectorsPage({ initialSector, setCurrentPage }: SectorPag
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    setIsLoading(true);
+    const timer = setTimeout(() => setIsLoading(false), 600);
+    return () => clearTimeout(timer);
+  }, [selectedSector.id]);
 
   return (
     <div className="pt-24 pb-20 bg-slate-50 min-h-screen">
@@ -168,49 +175,76 @@ export default function SectorsPage({ initialSector, setCurrentPage }: SectorPag
 
           {/* Details Panel */}
           <div className="lg:w-2/3">
-            <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-8 md:p-12 min-h-[600px] animate-in fade-in slide-in-from-bottom-4 duration-500">
-              <div className="flex items-center gap-4 mb-8">
-                <div className="bg-mfs-navy/5 p-4 rounded-xl text-mfs-navy">
-                  {React.cloneElement(selectedSector.icon, { className: "h-10 w-10 text-mfs-navy" })}
+            {isLoading ? (
+              <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-8 md:p-12 min-h-[600px] animate-pulse">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="h-16 w-16 bg-gray-200 rounded-xl"></div>
+                  <div className="h-8 bg-gray-200 rounded w-1/3"></div>
                 </div>
-                <h2 className="text-3xl font-bold text-gray-900">{selectedSector.title}</h2>
-              </div>
-              
-              <div className="prose prose-lg text-gray-600 max-w-none">
-                <p className="lead text-xl font-medium text-gray-800 mb-8 border-l-4 border-mfs-gold pl-4">
-                  {selectedSector.description}
-                </p>
+                
+                <div className="mb-8 pl-4">
+                  <div className="h-5 bg-gray-200 rounded w-full mb-3"></div>
+                  <div className="h-5 bg-gray-200 rounded w-11/12 mb-3"></div>
+                  <div className="h-5 bg-gray-200 rounded w-4/5"></div>
+                </div>
 
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 mt-12">Comprehensive Details & Features</h3>
+                <div className="h-8 bg-gray-200 rounded w-2/5 mb-6 mt-12"></div>
                 <div className="grid md:grid-cols-2 gap-4">
-                  {selectedSector.details.map((detail, index) => (
-                    <div key={index} className="flex items-start gap-3 bg-slate-50 p-4 rounded-lg border border-slate-100">
-                      <CheckCircle2 className="h-6 w-6 text-mfs-gold shrink-0 mt-0.5" />
-                      <span className="text-gray-700 font-medium">{detail}</span>
+                  {[...Array(6)].map((_, i) => (
+                    <div key={i} className="flex items-start gap-3 bg-slate-50 p-4 rounded-lg border border-slate-100">
+                      <div className="h-6 w-6 rounded-full bg-gray-200 shrink-0"></div>
+                      <div className="h-4 bg-gray-200 rounded w-3/4 mt-1"></div>
                     </div>
                   ))}
                 </div>
 
-                <div className="mt-12 bg-mfs-navy text-white p-8 rounded-xl relative overflow-hidden">
-                  <div className="relative z-10">
-                    <h3 className="text-2xl font-bold mb-4">Need bespoke security for your {selectedSector.title.toLowerCase()} business?</h3>
-                    <p className="text-gray-300 mb-6 max-w-xl">
-                      Contact our specialised team today for a comprehensive risk assessment and custom-tailored security quotation.
-                    </p>
-                    <button onClick={(e) => {
-                      e.preventDefault();
-                      setCurrentPage('contact');
-                      window.scrollTo(0, 0);
-                    }} className="inline-block bg-mfs-gold hover:bg-mfs-gold-hover text-mfs-navy font-bold px-8 py-3 rounded text-center transition-colors">
-                      Get a Custom Quote
-                    </button>
+                <div className="mt-12 bg-gray-100 p-8 rounded-xl h-48"></div>
+              </div>
+            ) : (
+              <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-8 md:p-12 min-h-[600px] animate-in fade-in slide-in-from-bottom-4 duration-500">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="bg-mfs-navy/5 p-4 rounded-xl text-mfs-navy">
+                    {React.cloneElement(selectedSector.icon, { className: "h-10 w-10 text-mfs-navy" })}
                   </div>
-                  <div className="absolute right-0 bottom-0 opacity-10 pointer-events-none transform translate-x-1/4 translate-y-1/4">
-                    {React.cloneElement(selectedSector.icon, { className: "w-64 h-64" })}
+                  <h2 className="text-3xl font-bold text-gray-900">{selectedSector.title}</h2>
+                </div>
+                
+                <div className="prose prose-lg text-gray-600 max-w-none">
+                  <p className="lead text-xl font-medium text-gray-800 mb-8 border-l-4 border-mfs-gold pl-4">
+                    {selectedSector.description}
+                  </p>
+
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6 mt-12">Comprehensive Details & Features</h3>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    {selectedSector.details.map((detail, index) => (
+                      <div key={index} className="flex items-start gap-3 bg-slate-50 p-4 rounded-lg border border-slate-100">
+                        <CheckCircle2 className="h-6 w-6 text-mfs-gold shrink-0 mt-0.5" />
+                        <span className="text-gray-700 font-medium">{detail}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="mt-12 bg-mfs-navy text-white p-8 rounded-xl relative overflow-hidden">
+                    <div className="relative z-10">
+                      <h3 className="text-2xl font-bold mb-4">Need bespoke security for your {selectedSector.title.toLowerCase()} business?</h3>
+                      <p className="text-gray-300 mb-6 max-w-xl">
+                        Contact our specialised team today for a comprehensive risk assessment and custom-tailored security quotation.
+                      </p>
+                      <button onClick={(e) => {
+                        e.preventDefault();
+                        setCurrentPage('contact');
+                        window.scrollTo(0, 0);
+                      }} className="inline-block bg-mfs-gold hover:bg-mfs-gold-hover text-mfs-navy font-bold px-8 py-3 rounded text-center transition-colors">
+                        Get a Custom Quote
+                      </button>
+                    </div>
+                    <div className="absolute right-0 bottom-0 opacity-10 pointer-events-none transform translate-x-1/4 translate-y-1/4">
+                      {React.cloneElement(selectedSector.icon, { className: "w-64 h-64" })}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
 

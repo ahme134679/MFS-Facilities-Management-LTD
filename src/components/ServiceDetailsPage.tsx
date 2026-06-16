@@ -1,5 +1,5 @@
 import { ArrowLeft, CheckCircle2 } from 'lucide-react';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function ServiceDetailsPage({
   serviceTitle,
@@ -8,6 +8,14 @@ export default function ServiceDetailsPage({
   serviceTitle: string;
   setCurrentPage: (page: string) => void;
 }) {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setIsLoading(true);
+    const timer = setTimeout(() => setIsLoading(false), 600);
+    return () => clearTimeout(timer);
+  }, [serviceTitle]);
+
   const allServices: Record<string, { desc: string, benefits: string[] }> = {
     "Manned Guarding": {
       desc: "Our SIA licensed security officers provide a strong physical deterrent for your premises. We offer reliable, continuous on-site security services UK from MFS Facilities management, tailored to blend in or stand out according to your business needs.",
@@ -55,35 +63,64 @@ export default function ServiceDetailsPage({
           Back to Services
         </button>
 
-        <div className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
-          <div className="p-8 md:p-12">
-            <h1 className="text-4xl font-bold text-mfs-navy mb-6">{serviceTitle}</h1>
-            <p className="text-xl text-gray-600 leading-relaxed mb-12">
-              {details.desc}
-            </p>
+        {isLoading ? (
+          <div className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden animate-pulse">
+            <div className="p-8 md:p-12">
+              <div className="h-10 bg-gray-200 rounded w-1/3 mb-6"></div>
+              <div className="space-y-3 mb-12">
+                <div className="h-4 bg-gray-200 rounded w-full"></div>
+                <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+                <div className="h-4 bg-gray-200 rounded w-4/6"></div>
+              </div>
 
-            <h3 className="text-2xl font-bold text-mfs-navy mb-6">Key Benefits</h3>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {details.benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <CheckCircle2 className="h-6 w-6 text-mfs-gold shrink-0 mt-0.5" />
-                  <span className="text-gray-700 font-medium">{benefit}</span>
-                </div>
-              ))}
-            </div>
+              <div className="h-8 bg-gray-200 rounded w-1/4 mb-6"></div>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {[...Array(4)].map((_, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <div className="h-6 w-6 rounded-full bg-gray-200"></div>
+                    <div className="h-4 bg-gray-200 rounded w-3/4"></div>
+                  </div>
+                ))}
+              </div>
 
-            <div className="mt-12 p-8 bg-gray-50 rounded-lg border border-gray-100">
-              <h4 className="text-xl font-bold text-mfs-navy mb-4">Interested in this service?</h4>
-              <p className="text-gray-600 mb-6">Contact us today to discuss your specific requirements and receive a tailored quote.</p>
-              <button 
-                onClick={() => setCurrentPage('contact')}
-                className="bg-mfs-navy hover:bg-mfs-blue text-white font-bold py-3 px-8 rounded-md transition-colors"
-              >
-                Get in Touch
-              </button>
+              <div className="mt-12 p-8 bg-gray-50 rounded-lg border border-gray-100">
+                <div className="h-6 bg-gray-200 rounded w-1/3 mb-4"></div>
+                <div className="h-4 bg-gray-200 rounded w-1/2 mb-6"></div>
+                <div className="h-12 bg-gray-200 rounded w-40"></div>
+              </div>
             </div>
           </div>
-        </div>
+        ) : (
+          <div className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
+            <div className="p-8 md:p-12 animate-in fade-in slide-in-from-bottom-4 duration-500">
+              <h1 className="text-4xl font-bold text-mfs-navy mb-6">{serviceTitle}</h1>
+              <p className="text-xl text-gray-600 leading-relaxed mb-12">
+                {details.desc}
+              </p>
+
+              <h3 className="text-2xl font-bold text-mfs-navy mb-6">Key Benefits</h3>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {details.benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <CheckCircle2 className="h-6 w-6 text-mfs-gold shrink-0 mt-0.5" />
+                    <span className="text-gray-700 font-medium">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-12 p-8 bg-gray-50 rounded-lg border border-gray-100">
+                <h4 className="text-xl font-bold text-mfs-navy mb-4">Interested in this service?</h4>
+                <p className="text-gray-600 mb-6">Contact us today to discuss your specific requirements and receive a tailored quote.</p>
+                <button 
+                  onClick={() => setCurrentPage('contact')}
+                  className="bg-mfs-navy hover:bg-mfs-blue text-white font-bold py-3 px-8 rounded-md transition-colors"
+                >
+                  Get in Touch
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
