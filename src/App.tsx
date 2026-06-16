@@ -16,6 +16,7 @@ import TermsOfService from './components/TermsOfService';
 import ModernSlavery from './components/ModernSlavery';
 import CookiePolicy from './components/CookiePolicy';
 import FAQ from './components/FAQ';
+import BackToTop from './components/BackToTop';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -56,6 +57,7 @@ export default function App() {
       </main>
 
       <Footer setCurrentPage={setCurrentPage} />
+      <BackToTop />
     </div>
   );
 }
