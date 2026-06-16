@@ -22,7 +22,7 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
     { name: 'Home', page: 'home', href: '#' },
     { name: 'About Us', page: 'about', href: '#' },
     { name: 'Services', page: 'home', href: '#services' },
-    { name: 'Sectors', page: 'home', href: '#sectors' },
+    { name: 'Sectors', page: 'sectors', href: '#' },
     { name: 'Contact', page: 'contact', href: '#' },
   ];
 

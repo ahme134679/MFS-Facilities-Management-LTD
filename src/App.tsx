@@ -9,10 +9,12 @@ import Footer from './components/Footer';
 import AboutPage from './components/AboutPage';
 import ContactPage from './components/ContactPage';
 import ServiceDetailsPage from './components/ServiceDetailsPage';
+import SectorsPage from './components/SectorsPage';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [selectedService, setSelectedService] = useState('Manned Guarding');
+  const [selectedSector, setSelectedSector] = useState<string | null>(null);
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col font-sans">
@@ -24,7 +26,7 @@ export default function App() {
             <Hero />
             <Services setCurrentPage={setCurrentPage} setSelectedService={setSelectedService} />
             <About />
-            <Sectors />
+            <Sectors setCurrentPage={setCurrentPage} setSelectedSector={setSelectedSector} />
           </>
         ) : currentPage === 'about' ? (
           <AboutPage />
@@ -32,6 +34,8 @@ export default function App() {
           <ContactPage />
         ) : currentPage === 'service-details' ? (
           <ServiceDetailsPage serviceTitle={selectedService} setCurrentPage={setCurrentPage} />
+        ) : currentPage === 'sectors' ? (
+          <SectorsPage initialSector={selectedSector} />
         ) : null}
       </main>
 
