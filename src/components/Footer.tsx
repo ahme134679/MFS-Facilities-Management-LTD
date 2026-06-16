@@ -103,6 +103,7 @@ export default function Footer({ setCurrentPage }: FooterProps) {
           </p>
           <div className="flex gap-4">
             <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('privacy'); window.scrollTo(0,0); }} className="text-gray-500 hover:text-white text-xs transition-colors">Privacy Policy</a>
+            <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('cookies'); window.scrollTo(0,0); }} className="text-gray-500 hover:text-white text-xs transition-colors">Cookie Policy</a>
             <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('terms'); window.scrollTo(0,0); }} className="text-gray-500 hover:text-white text-xs transition-colors">Terms of Service</a>
             <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('slavery'); window.scrollTo(0,0); }} className="text-gray-500 hover:text-white text-xs transition-colors">Modern Slavery Statement</a>
           </div>

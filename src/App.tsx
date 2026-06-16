@@ -14,6 +14,7 @@ import SectorsPage from './components/SectorsPage';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfService from './components/TermsOfService';
 import ModernSlavery from './components/ModernSlavery';
+import CookiePolicy from './components/CookiePolicy';
 import FAQ from './components/FAQ';
 
 export default function App() {
@@ -49,6 +50,8 @@ export default function App() {
           <TermsOfService />
         ) : currentPage === 'slavery' ? (
           <ModernSlavery />
+        ) : currentPage === 'cookies' ? (
+          <CookiePolicy />
         ) : null}
       </main>
 
