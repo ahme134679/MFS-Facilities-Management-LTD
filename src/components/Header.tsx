@@ -62,7 +62,8 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
               referrerPolicy="no-referrer"
             />
             <div className="hidden sm:flex flex-col">
-              <span className="text-white font-bold text-base md:text-lg leading-tight uppercase tracking-wide">MFS Facilities Management LTD</span>
+              <span className="text-white font-bold text-base md:text-lg leading-tight uppercase tracking-wide">MFS Facilities Management</span>
+              <span className="text-white font-bold text-sm md:text-base leading-tight uppercase tracking-wide">LTD</span>
             </div>
           </div>
 

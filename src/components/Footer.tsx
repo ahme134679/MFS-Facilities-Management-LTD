@@ -99,7 +99,7 @@ export default function Footer({ setCurrentPage }: FooterProps) {
 
         <div className="border-t border-gray-800 pt-8 mt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-xs">
-            &copy; {new Date().getFullYear()} MFS Facilities Management LTD. All rights reserved. Company Reg: XXXXXXXX.
+            &copy; {new Date().getFullYear()} MFS Facilities Management LTD. All rights reserved. Company Reg: 16304479.
           </p>
           <div className="flex gap-4">
             <a href="#" className="text-gray-500 hover:text-white text-xs transition-colors">Privacy Policy</a>
