@@ -35,7 +35,7 @@ export default function App() {
         ) : currentPage === 'service-details' ? (
           <ServiceDetailsPage serviceTitle={selectedService} setCurrentPage={setCurrentPage} />
         ) : currentPage === 'sectors' ? (
-          <SectorsPage initialSector={selectedSector} />
+          <SectorsPage initialSector={selectedSector} setCurrentPage={setCurrentPage} />
         ) : null}
       </main>
 

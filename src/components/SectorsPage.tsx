@@ -3,6 +3,7 @@ import { Building, Store, HardHat, GraduationCap, Plane, Home, Beer, ChevronRigh
 
 interface SectorPageProps {
   initialSector?: string | null;
+  setCurrentPage: (page: string) => void;
 }
 
 const sectorsData = [
@@ -106,7 +107,7 @@ const sectorsData = [
   }
 ];
 
-export default function SectorsPage({ initialSector }: SectorPageProps) {
+export default function SectorsPage({ initialSector, setCurrentPage }: SectorPageProps) {
   const [selectedSector, setSelectedSector] = useState(sectorsData[0]);
 
   useEffect(() => {
@@ -196,9 +197,13 @@ export default function SectorsPage({ initialSector }: SectorPageProps) {
                     <p className="text-gray-300 mb-6 max-w-xl">
                       Contact our specialised team today for a comprehensive risk assessment and custom-tailored security quotation.
                     </p>
-                    <a href="#contact" className="inline-block bg-mfs-gold hover:bg-mfs-gold-hover text-mfs-navy font-bold px-8 py-3 rounded text-center transition-colors">
+                    <button onClick={(e) => {
+                      e.preventDefault();
+                      setCurrentPage('contact');
+                      window.scrollTo(0, 0);
+                    }} className="inline-block bg-mfs-gold hover:bg-mfs-gold-hover text-mfs-navy font-bold px-8 py-3 rounded text-center transition-colors">
                       Get a Custom Quote
-                    </a>
+                    </button>
                   </div>
                   <div className="absolute right-0 bottom-0 opacity-10 pointer-events-none transform translate-x-1/4 translate-y-1/4">
                     {React.cloneElement(selectedSector.icon, { className: "w-64 h-64" })}
