@@ -3,7 +3,6 @@ import { motion } from 'motion/react';
 
 export default function About({ setCurrentPage }: { setCurrentPage?: (page: string) => void }) {
   const points = [
-    "SIA Approved Contractor Scheme (ACS) Status",
     "ISO 9001 Quality Management Certified",
     "Tailored Sector-Specific Security Solutions",
     "Rigorous Vetting & Training Interventions",

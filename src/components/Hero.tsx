@@ -52,7 +52,7 @@ export default function Hero() {
             <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-6 text-sm text-gray-300">
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-mfs-gold" />
-                <span>SIA Approved Contractor</span>
+                <span>Fully Vetted Staff</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-mfs-gold" />

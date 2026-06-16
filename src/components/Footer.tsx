@@ -25,10 +25,10 @@ export default function Footer({ setCurrentPage }: FooterProps) {
   return (
     <footer className="bg-[#050B14] pt-16 pb-8 border-t-4 border-mfs-gold">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           
           {/* Brand & Intro */}
-          <div className="lg:col-span-1">
+          <div>
             <div className="flex items-center gap-2 mb-6">
               <ShieldCheck className="h-8 w-8 text-mfs-gold" />
               <div className="flex flex-col">
@@ -70,31 +70,6 @@ export default function Footer({ setCurrentPage }: FooterProps) {
               <li><a href="#" onClick={(e) => { e.preventDefault(); handleNavClick(e as any, 'home', '#services'); }} className="text-gray-400 hover:text-mfs-gold text-sm transition-colors block">Concierge Security</a></li>
             </ul>
           </div>
-
-          {/* Accreditations Dummy */}
-          <div>
-            <h4 className="text-white font-bold mb-6 uppercase text-sm tracking-wider">Accreditations</h4>
-            <div className="grid grid-cols-2 gap-4">
-               {/* Visual placeholders for badges like SIA, ISO 9001 etc */}
-               <div className="bg-white/5 border border-white/10 rounded overflow-hidden aspect-video flex flex-col items-center justify-center p-2 text-center text-xs text-gray-400">
-                  <ShieldCheck className="h-6 w-6 text-mfs-gold mb-1" />
-                  SIA Approved
-               </div>
-               <div className="bg-white/5 border border-white/10 rounded overflow-hidden aspect-video flex flex-col items-center justify-center p-2 text-center text-xs text-gray-400">
-                  <ShieldCheck className="h-6 w-6 text-gray-300 mb-1" />
-                  ISO 9001
-               </div>
-               <div className="bg-white/5 border border-white/10 rounded overflow-hidden aspect-video flex flex-col items-center justify-center p-2 text-center text-xs text-gray-400">
-                  <ShieldCheck className="h-6 w-6 text-gray-300 mb-1" />
-                  SafeContractor
-               </div>
-               <div className="bg-white/5 border border-white/10 rounded overflow-hidden aspect-video flex flex-col items-center justify-center p-2 text-center text-xs text-gray-400">
-                  <ShieldCheck className="h-6 w-6 text-gray-300 mb-1" />
-                  CHAS
-               </div>
-            </div>
-          </div>
-
         </div>
 
         <div className="border-t border-gray-800 pt-8 mt-8 flex flex-col md:flex-row items-center justify-between gap-4">
