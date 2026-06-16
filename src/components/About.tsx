@@ -29,11 +29,6 @@ export default function About({ setCurrentPage }: { setCurrentPage?: (page: stri
                 className="rounded-lg shadow-2xl z-10 relative"
               />
               <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-mfs-gold rounded-lg -z-0 hidden md:block"></div>
-              {/* Floating Stat Badge */}
-              <div className="absolute -left-6 top-12 bg-white p-6 rounded-lg shadow-xl z-20 hidden sm:block">
-                <div className="text-4xl font-black text-mfs-navy mb-1">15+</div>
-                <div className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Years of<br/>Experience</div>
-              </div>
             </div>
           </motion.div>
 
@@ -43,14 +38,14 @@ export default function About({ setCurrentPage }: { setCurrentPage?: (page: stri
             viewport={{ once: true }}
             className="w-full lg:w-1/2"
           >
-            <h2 className="text-mfs-gold font-bold tracking-wider uppercase text-sm mb-2">About MFS Facilities Management</h2>
+            <h2 className="text-mfs-gold font-bold tracking-wider uppercase text-sm mb-2">About MFS Facilities management</h2>
             <h3 className="text-3xl md:text-4xl font-bold text-mfs-navy mb-6">
-              Setting the standard in professional security services.
+              Setting the standard in professional security services UK and expert property services UK.
             </h3>
             
             <div className="text-gray-600 space-y-4 mb-8 text-lg">
               <p>
-                At MFS Facilities Management LTD, we understand that security is not a one-size-fits-all commodity. We are a trusted provider of bespoke security guarding and facilities management across the UK, with a strong focus on Cardiff, Newport, South Wales, and Bristol.
+                At MFS Facilities Management LTD, registered in 2025, we understand that security is not a one-size-fits-all commodity. We are a trusted provider of bespoke security services UK, cleaning services UK, and comprehensive MFS Facilities management across the UK, with a strong focus on Cardiff, Newport, South Wales, and Bristol.
               </p>
               <p>
                 Our philosophy is built on three core pillars: proactive risk management, highly-trained personnel, and unwavering reliability. Whether you require premium corporate concierge, robust construction site security, or rapid alarm response, we partner with you to safeguard your operations.

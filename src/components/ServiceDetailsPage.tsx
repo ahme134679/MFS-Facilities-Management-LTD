@@ -10,19 +10,19 @@ export default function ServiceDetailsPage({
 }) {
   const allServices: Record<string, { desc: string, benefits: string[] }> = {
     "Manned Guarding": {
-      desc: "Our SIA licensed security officers provide a strong physical deterrent for your premises. We offer reliable, continuous on-site security, tailored to blend in or stand out according to your business needs.",
+      desc: "Our SIA licensed security officers provide a strong physical deterrent for your premises. We offer reliable, continuous on-site security services UK from MFS Facilities management, tailored to blend in or stand out according to your business needs.",
       benefits: ["Highly trained personnel", "Conflict management skills", "Regularly vetted guards", "Tailored to your site requirements"]
     },
     "Mobile Patrols": {
-      desc: "If full-time manned guarding is not required, our mobile patrols provide randomized physical checks of your premises to deter unauthorized access and stop threats early.",
+      desc: "If full-time manned guarding is not required, our mobile patrols provide randomized physical checks of your premises to deter unauthorized access and stop threats early. Trusted property services UK and security services UK.",
       benefits: ["Randomized schedules", "GPS-tracked patrols", "Rapid threat identification", "Cost-effective security"]
     },
     "Keyholding & Alarm Response": {
-      desc: "We deploy to your site 24/7 in response to alarm activations so you and your staff don't have to risk potential danger or out-of-hours disruption.",
+      desc: "We deploy to your site 24/7 in response to alarm activations so you and your staff don't have to risk potential danger or out-of-hours disruption. Part of our comprehensive facilities management UK solutions.",
       benefits: ["Rapid response times", "First-responder coordination", "Comprehensive post-incident reports", "Complete peace of mind"]
     },
     "Corporate Security": {
-      desc: "Corporate environments require security that balances safety with approachability. Our concierge security staff excel in customer service while maintaining strict access control.",
+      desc: "Corporate environments require security that balances safety with approachability. Our concierge security staff excel in customer service while maintaining strict access control in all our security services UK and property services UK.",
       benefits: ["Front-of-house reception duties", "Visitor management", "Discreet access monitoring", "Professional business attire"]
     },
     "CCTV & Remote Monitoring": {
@@ -33,9 +33,9 @@ export default function ServiceDetailsPage({
       desc: "Professional, SIA licensed door supervisors ensuring a safe, welcoming environment for your patrons and staff, particularly across Cardiff, Newport, South Wales, and Bristol.",
       benefits: ["Capacity and access control", "Conflict de-escalation", "Licensing law compliance", "First aid trained personnel"]
     },
-    "Facilities Management": {
-      desc: "Beyond security, we offer comprehensive facilities management services to keep your operations running smoothly, from regular cleaning to scheduled maintenance.",
-      benefits: ["Integrated cleaning services", "Routine site maintenance", "Vendor management", "Single point of contact"]
+    "Facilities Management UK & Cleaning Services UK": {
+      desc: "Beyond security, MFS Facilities management offers comprehensive facilities management UK services to keep your operations running smoothly. From professional cleaning services UK to comprehensive property services UK and scheduled maintenance, we have you covered.",
+      benefits: ["Integrated cleaning services UK", "Routine property services UK maintenance", "Vendor management", "Single point of contact"]
     }
   };
 

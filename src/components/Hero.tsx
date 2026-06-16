@@ -28,10 +28,10 @@ export default function Hero() {
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 mt-4">
-              Professional <span className="text-mfs-gold">Security</span> & Facilities Management
+              MFS Facilities Management: <span className="text-mfs-gold">Security Services UK</span> & Property Services
             </h1>
             <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-xl leading-relaxed">
-              Tailored security solutions safeguarding your business, assets, and people across the UK, specializing in Cardiff, Newport, South Wales, and Bristol. Excellence and vigilance you can rely on.
+              MFS Facilities management delivers tailored security services UK, cleaning services UK, and property services UK, safeguarding your business, assets, and people across the UK. Expert facilities management UK you can rely on.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">

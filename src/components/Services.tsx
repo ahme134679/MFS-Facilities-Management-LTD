@@ -40,8 +40,8 @@ export default function Services({
       icon: <Beer className="h-8 w-8 text-mfs-gold" />
     },
     {
-      title: "Facilities Management",
-      description: "Comprehensive fm services including cleaning, maintenance, and site management for seamless business operations.",
+      title: "Facilities Management UK & Cleaning Services UK",
+      description: "Comprehensive MFS Facilities management services including professional cleaning services UK, property services UK, and site management for seamless business operations.",
       icon: <Shield className="h-8 w-8 text-mfs-gold" />
     }
   ];
@@ -51,9 +51,9 @@ export default function Services({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-mfs-gold font-bold tracking-wider uppercase text-sm mb-2">Our Capabilities</h2>
-          <h3 className="text-3xl md:text-4xl font-bold text-mfs-navy mb-4">Comprehensive Security Solutions</h3>
+          <h3 className="text-3xl md:text-4xl font-bold text-mfs-navy mb-4">Comprehensive Security Services UK & Facilities Management UK</h3>
           <p className="text-gray-600 text-lg">
-            We deliver tailored security and facilities management services designed to mitigate risk and protect your most valuable assets.
+            We deliver tailored security services UK, cleaning services UK, property services UK, and expert MFS Facilities management designed to mitigate risk and protect your most valuable assets.
           </p>
         </div>
 
