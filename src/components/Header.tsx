@@ -56,14 +56,14 @@ export default function Header({ currentPage, setCurrentPage }: HeaderProps) {
             onClick={(e) => handleNavClick(e as any, navLinks[0])}
           >
             <img 
-              src="https://lh3.googleusercontent.com/pw/AP1GczN01Rcctmpprxt_Ds89IeEGe3NfjShrCuNMU2rXPRnldpynbuV9TF5KK58p1Bm3f1h3xgjyMeJyyGzC0VuGMrrwtvkDLUnjmr16Sqe12b6S-SHzb0Yt=s800" 
+              src="https://lh3.googleusercontent.com/pw/AP1GczMrxiyfoEbpbq_UMUlh3plntNgGKGTz4D-YZ9iAosywb4nr3jb3FB3JyrXSF-NfGj_L4QoegB_VoIm_0EVgxhULUZoJz_C28P60MUNyj7PtWB0gC5Yw=s800" 
               alt="MFS Facilities Management" 
-              className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain"
+              className="h-12 sm:h-16 md:h-18 lg:h-20 w-auto object-contain"
               referrerPolicy="no-referrer"
             />
             <div className="hidden sm:flex flex-col">
               <span className="text-white font-bold text-base md:text-lg leading-tight uppercase tracking-wide">MFS Facilities Management</span>
-              <span className="text-white font-bold text-sm md:text-base leading-tight uppercase tracking-wide">LTD</span>
+              <span className="text-white font-bold text-sm md:text-base leading-tight uppercase tracking-wide">LTD.</span>
             </div>
           </div>
 

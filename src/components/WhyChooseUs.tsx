@@ -8,8 +8,8 @@ export default function WhyChooseUs() {
       icon: <Award className="h-10 w-10 text-mfs-gold mb-4" />
     },
     {
-      title: "SIA Licensed & Vetted Personnel",
-      description: "Trust is the foundation of our business. All our security professionals are fully SIA licensed, continuously trained, and strictly vetted to provide secure and reliable security services UK.",
+      title: "Fully Vetted Personnel",
+      description: "Trust is the foundation of our business. All our security professionals are fully trained and strictly vetted to provide secure and reliable security services UK.",
       icon: <ShieldCheck className="h-10 w-10 text-mfs-gold mb-4" />
     },
     {

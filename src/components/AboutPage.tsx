@@ -91,7 +91,7 @@ export default function AboutPage() {
                 Founded in 2025 on the principles of reliability and professionalism, MFS Facilities Management has grown into a leading force in the UK security industry, specifically serving Cardiff, Newport, South Wales, and Bristol. We understand that security is more than just a physical presence; it is about proactive risk management, advanced technology integration, and impeccable customer service.
               </p>
               <p>
-                Our rigorous recruitment process ensures we only deploy SIA-licensed professionals who undergo continuous training in conflict management, customer care, and emergency response.
+                Our rigorous recruitment process ensures we only deploy fully vetted professionals who undergo continuous training in conflict management, customer care, and emergency response.
               </p>
             </div>
             

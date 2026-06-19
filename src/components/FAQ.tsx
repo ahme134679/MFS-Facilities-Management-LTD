@@ -12,7 +12,7 @@ export default function FAQ() {
     },
     {
       question: "Do you provide security services across the UK?",
-      answer: "Yes, MFS Facilities management provides premium security services across the entire UK. While we have a strong regional focus and expertise in Cardiff, Newport, South Wales, and Bristol, our operations and network of SIA-licensed professionals enable us to deliver reliable security solutions nationwide."
+      answer: "Yes, MFS Facilities management provides premium security services across the entire UK. While we have a strong regional focus and expertise in Cardiff, Newport, South Wales, and Bristol, our operations and network of fully vetted professionals enable us to deliver reliable security solutions nationwide."
     },
     {
       question: "Can you provide cleaning and maintenance together?",

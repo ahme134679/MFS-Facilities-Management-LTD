@@ -97,7 +97,7 @@ const sectorsData = [
     icon: <Beer className="h-6 w-6" />,
     description: "Professional door supervision and security services designed to maintain a safe, welcoming, and compliant environment for patrons and staff in licensed premises.",
     details: [
-      "SIA licensed door supervisors",
+      "Professional door supervisors",
       "ID checking and entry age verification",
       "Conflict management and de-escalation",
       "Capacity monitoring and crowd control",

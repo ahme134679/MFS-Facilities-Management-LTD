@@ -11,7 +11,7 @@ export default function Services({
   const services = [
     {
       title: "Manned Guarding",
-      description: "Highly trained, SIA licensed security officers providing a visible, physical deterrent for commercial and retail properties.",
+      description: "Highly trained, fully vetted security officers providing a visible, physical deterrent for commercial and retail properties.",
       icon: <Users className="h-8 w-8 text-mfs-gold" />
     },
     {
@@ -36,7 +36,7 @@ export default function Services({
     },
     {
       title: "Door Supervision (Pubs & Bars)",
-      description: "Professional, SIA licensed door supervisors ensuring a safe, welcoming environment for your patrons and staff.",
+      description: "Professional, fully vetted door supervisors ensuring a safe, welcoming environment for your patrons and staff.",
       icon: <Beer className="h-8 w-8 text-mfs-gold" />
     },
     {

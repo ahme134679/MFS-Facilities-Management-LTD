@@ -18,7 +18,7 @@ export default function ServiceDetailsPage({
 
   const allServices: Record<string, { desc: string, benefits: string[] }> = {
     "Manned Guarding": {
-      desc: "Our SIA licensed security officers provide a strong physical deterrent for your premises. We offer reliable, continuous on-site security services UK from MFS Facilities management, tailored to blend in or stand out according to your business needs.",
+      desc: "Our fully trained security officers provide a strong physical deterrent for your premises. We offer reliable, continuous on-site security services UK from MFS Facilities management, tailored to blend in or stand out according to your business needs.",
       benefits: ["Highly trained personnel", "Conflict management skills", "Regularly vetted guards", "Tailored to your site requirements"]
     },
     "Mobile Patrols": {
@@ -38,7 +38,7 @@ export default function ServiceDetailsPage({
       benefits: ["Visual verification of alarms", "Deterrent against theft and vandalism", "Evidence gathering", "24/7 remote oversight"]
     },
     "Door Supervision (Pubs & Bars)": {
-      desc: "Professional, SIA licensed door supervisors ensuring a safe, welcoming environment for your patrons and staff, particularly across Cardiff, Newport, South Wales, and Bristol.",
+      desc: "Professional, fully vetted door supervisors ensuring a safe, welcoming environment for your patrons and staff, particularly across Cardiff, Newport, South Wales, and Bristol.",
       benefits: ["Capacity and access control", "Conflict de-escalation", "Licensing law compliance", "First aid trained personnel"]
     },
     "Facilities Management UK & Cleaning Services UK": {
