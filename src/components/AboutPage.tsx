@@ -10,7 +10,6 @@ export default function AboutPage() {
   ];
 
   const milestones = [
-    "ISO 9001 Quality Management Certified",
     "Expansion across all major UK cities, including Cardiff, Newport, South Wales, and Bristol",
     "Implementation of state-of-the-art 24/7 Control Room",
     "Dedicated bespoke training academy for all operatives"

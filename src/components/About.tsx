@@ -3,7 +3,6 @@ import { motion } from 'motion/react';
 
 export default function About({ setCurrentPage }: { setCurrentPage?: (page: string) => void }) {
   const points = [
-    "ISO 9001 Quality Management Certified",
     "Tailored Sector-Specific Security Solutions",
     "Rigorous Vetting & Training Interventions",
     "24/7/365 National Control Centre",
